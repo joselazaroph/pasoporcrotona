@@ -1,16 +1,39 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    --bg-obsidian: #090806;
+    --bg-charcoal: #110f0b;
+    --bg-card: #16130e;
+    --bg-card-hover: #1f1a14;
+    --border-sepia: #2d251b;
+    --border-gold: rgba(212, 175, 99, 0.35);
+    --text-parchment: #f3ebd8;
+    --text-vellum: #dccfb8;
+    --text-stone: #a6957c;
+    --accent-gold: #d4af63;
+    --accent-gold-light: #e8cb88;
+    --accent-bronze: #9c7a38;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: #0d0c0a;
-    color: #ede7de;
+    background-color: #090806;
+    color: #f3ebd8;
     overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 15% 10%, rgba(212, 175, 99, 0.06) 0%, transparent 45%),
+      radial-gradient(circle at 85% 30%, rgba(160, 128, 80, 0.05) 0%, transparent 50%);
   }
 
   h1, h2, h3, h4, .font-heading, .font-futura {
     font-family: 'Futura', 'Futura PT', 'Futura-Medium', 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.025em;
   }
 
   .font-serif-renaissance {
@@ -18,19 +41,49 @@
   }
 }
 
+/* Custom utility classes for the Crotona Dark Parchment & Golden Ratio aesthetic */
+.crotona-card {
+  background: linear-gradient(180deg, rgba(25, 21, 16, 0.92) 0%, rgba(16, 14, 10, 0.96) 100%);
+  border: 1px solid #2d251b;
+  box-shadow: 0 12px 32px -12px rgba(0, 0, 0, 0.75), inset 0 1px 0 0 rgba(243, 235, 216, 0.04);
+}
+
+.crotona-card:hover {
+  border-color: rgba(212, 175, 99, 0.45);
+  box-shadow: 0 18px 40px -12px rgba(0, 0, 0, 0.85), 0 0 24px -6px rgba(212, 175, 99, 0.12), inset 0 1px 0 0 rgba(212, 175, 99, 0.12);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f5ecd7 0%, #d4af63 55%, #b58d3d 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-button {
+  background: linear-gradient(135deg, #dfbe78 0%, #c59b49 100%);
+  color: #0e0b08;
+  border: 1px solid #eed59a;
+  box-shadow: 0 4px 20px -4px rgba(212, 175, 99, 0.35);
+}
+
+.gold-button:hover {
+  background: linear-gradient(135deg, #ebd092 0%, #d4ab59 100%);
+  box-shadow: 0 6px 25px -3px rgba(212, 175, 99, 0.5);
+}
+
 /* Renaissance antique scrollbars */
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #0d0c0a;
+  background: #090806;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2a2520;
+  background: #2b2319;
   border-radius: 9999px;
-  border: 1px solid rgba(197, 160, 89, 0.15);
+  border: 1px solid rgba(212, 175, 99, 0.25);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3e362e;
+  background: #423627;
 }

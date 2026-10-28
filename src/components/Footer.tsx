@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, RefreshCw } from 'lucide-react';
+import { ExternalLink, RefreshCw, Phone, MessageCircle } from 'lucide-react';
 import { PodcastInfo } from '../types/podcast';
 
 interface FooterProps {
@@ -11,60 +11,92 @@ export const Footer: React.FC<FooterProps> = ({
   podcast,
   onOpenSyncModal
 }) => {
+  const contactPhone = podcast.contactPhone || '+56 9 3746 0497';
+
   return (
-    <footer className="bg-[#0a0908] border-t border-[#26201a] py-14 text-[#8a7c6e] text-xs">
+    <footer className="bg-[#070605] border-t border-[#2d251b] py-14 text-[#9c8c74] text-xs relative">
+      {/* Subtle top golden hairline */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#d4af63]/35 to-transparent" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Classical Renaissance motto block */}
-        <div className="text-center max-w-2xl mx-auto space-y-2.5 pb-8 border-b border-[#221c16]">
-          <p className="font-serif-renaissance text-base sm:text-lg text-[#d4c8b8] italic">
+        <div className="text-center max-w-2xl mx-auto space-y-2.5 pb-8 border-b border-[#221c15]">
+          <p className="font-serif-renaissance text-base sm:text-xl text-[#e2d6c1] italic">
             &ldquo;El entrenamiento merece ser pensado, no solo ejecutado. Aquí, la ciencia se estudia, se cuestiona y se cuenta con rigor, pensamiento crítico y honestidad.&rdquo;
           </p>
-          <span className="block text-xs uppercase tracking-widest font-futura font-bold text-[#c5a059]">
+          <span className="block text-xs uppercase tracking-widest font-futura font-bold text-[#d4af63]">
             — De paso por Crotona · Filosofía con mancuernas
           </span>
         </div>
 
         {/* Main Footer Block: Symmetrical distribution matching Header */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-8 border-b border-[#221c16]">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 pb-8 border-b border-[#221c15]">
           
-          {/* Brand & Host Identity (Uncompressed, spacious typography) */}
-          <div className="space-y-2.5 max-w-lg">
+          {/* Brand & Host Identity with Official ICO Medallion */}
+          <div className="space-y-3 max-w-lg">
             <div className="flex items-center gap-3">
-              <span className="text-xl">🏛️</span>
-              <h3 className="font-futura text-lg sm:text-xl font-bold uppercase tracking-wide text-[#f7f2ea]">
-                De paso por Crotona
-              </h3>
-            </div>
-            
-            <div className="text-xs sm:text-sm font-futura tracking-wide text-[#c5a059] font-medium flex items-center gap-1.5 flex-wrap">
-              <span>Por</span>
-              <a 
-                href="https://www.instagram.com/h_de_luz/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[#f5efe6] hover:text-[#c5a059] font-semibold underline decoration-[#c5a059]/60 underline-offset-4 transition-colors"
-                title="Instagram de José Lázaro Peña (@h_de_luz)"
-              >
-                José Lázaro Peña
-              </a>
-              <span className="text-[#695d50]">·</span>
-              <span className="text-[#a89b8d] font-normal">Filosofía con mancuernas</span>
+              <div className="w-10 h-10 rounded-full p-[1.5px] bg-gradient-to-br from-[#e8cb88] via-[#d4af63] to-[#6e5223] shrink-0">
+                <img
+                  src="/crotona-logo-dark.jpg"
+                  alt="Emblema De paso por Crotona"
+                  className="w-full h-full rounded-full object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="font-futura text-lg sm:text-xl font-bold uppercase tracking-wide text-[#f3ebd8]">
+                  De paso por Crotona
+                </h3>
+                <div className="text-xs font-futura tracking-wide text-[#d4af63] font-medium flex items-center gap-1.5 flex-wrap">
+                  <span>Por</span>
+                  <a 
+                    href="https://www.instagram.com/h_de_luz/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[#f3ebd8] hover:text-[#d4af63] font-semibold underline decoration-[#d4af63]/60 underline-offset-4 transition-colors"
+                    title="Instagram de José Lázaro Peña (@h_de_luz)"
+                  >
+                    José Lázaro Peña
+                  </a>
+                  <span className="text-[#695d50]">·</span>
+                  <span className="text-[#a6957c] font-normal">Filosofía con mancuernas</span>
+                </div>
+              </div>
             </div>
 
-            <p className="text-[#8c7f71] text-xs leading-relaxed max-w-md">
+            <p className="text-[#9c8c74] text-xs leading-relaxed max-w-md">
               Porque las grandes preguntas de la filosofía también se responden con el cuerpo.
             </p>
+
+            {/* Direct Contact Phone in Footer */}
+            <div className="pt-1 flex flex-wrap items-center gap-3 text-xs font-futura">
+              <a
+                href="https://wa.me/56937460497?text=Hola%20Jos%C3%A9%20L%C3%A1zaro,%20vengo%20desde%20la%20web%20De%20paso%20por%20Crotona"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#14110c] hover:bg-[#1e1912] border border-[#332a1e] hover:border-[#d4af63]/60 text-[#f3ebd8] hover:text-[#d4af63] transition-colors"
+              >
+                <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
+                <span className="font-bold tracking-wider">{contactPhone}</span>
+              </a>
+              <a
+                href="tel:+56937460497"
+                className="inline-flex items-center gap-1.5 text-[#a6957c] hover:text-[#d4af63] transition-colors"
+              >
+                <Phone className="w-3.5 h-3.5 text-[#d4af63]" />
+                <span>Llamada directa</span>
+              </a>
+            </div>
           </div>
 
           {/* Platforms: Identical ordered distribution to top (1. Spotify, 2. YouTube, 3. Telegram, 4. Apple Podcast) */}
           <div className="space-y-2.5 w-full lg:w-auto">
-            <div className="text-[10px] font-futura uppercase tracking-widest text-[#96897b] font-semibold">
+            <div className="text-[10px] font-futura uppercase tracking-widest text-[#a6957c] font-semibold">
               Canales & Plataformas Oficiales:
             </div>
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
               
-              {/* 1. Spotify (Verde) */}
+              {/* 1. Spotify */}
               <a
                 href={podcast.spotifyShowUrl}
                 target="_blank"
@@ -79,7 +111,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <ExternalLink className="w-3 h-3 text-white/70" />
               </a>
 
-              {/* 2. YouTube (Rojo) */}
+              {/* 2. YouTube */}
               <a
                 href={podcast.youtubeUrl || 'https://www.youtube.com/@pasoporcrotona'}
                 target="_blank"
@@ -94,7 +126,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <ExternalLink className="w-3 h-3 text-white/70" />
               </a>
 
-              {/* 3. Telegram (Azul Oficial Telegram) */}
+              {/* 3. Telegram */}
               <a
                 href={podcast.telegramUrl || 'https://t.me/pasoporcrotona'}
                 target="_blank"
@@ -109,7 +141,7 @@ export const Footer: React.FC<FooterProps> = ({
                 <ExternalLink className="w-3 h-3 text-white/70" />
               </a>
 
-              {/* 4. Apple Podcast (Morado) */}
+              {/* 4. Apple Podcast */}
               <a
                 href={podcast.applePodcastsUrl || 'https://podcasts.apple.com/us/podcast/de-paso-por-crotona/id6792611427'}
                 target="_blank"
@@ -129,46 +161,52 @@ export const Footer: React.FC<FooterProps> = ({
 
         </div>
 
-        {/* Navigation & Utilities Row: Clean, distinct separation */}
+        {/* Navigation & Utilities Row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-1">
           
-          <nav className="flex flex-wrap items-center gap-6 text-xs uppercase tracking-wider font-futura text-[#b8ab9b]">
+          <nav className="flex flex-wrap items-center gap-6 text-xs uppercase tracking-wider font-futura text-[#c4b49b]">
             <a 
               href="#episodios" 
-              className="hover:text-[#c5a059] transition-colors"
+              className="hover:text-[#d4af63] transition-colors"
             >
               Tratados
             </a>
             <a 
               href="#sobre-el-show" 
-              className="hover:text-[#c5a059] transition-colors"
+              className="hover:text-[#d4af63] transition-colors"
             >
               La Filosofía
+            </a>
+            <a 
+              href="#contacto" 
+              className="hover:text-[#d4af63] transition-colors"
+            >
+              Contacto ({contactPhone})
             </a>
             <button
               type="button"
               onClick={onOpenSyncModal}
-              className="inline-flex items-center gap-1.5 hover:text-[#c5a059] transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 hover:text-[#d4af63] transition-colors cursor-pointer"
             >
               <RefreshCw className="w-3.5 h-3.5" />
               <span>Sincronizar Feed</span>
             </button>
           </nav>
 
-          <div className="text-[11px] text-[#786b5d] font-futura tracking-wide">
+          <div className="text-[11px] text-[#7c6e5b] font-futura tracking-wide">
             Audio & Miniaturas sincronizadas vía Spotify / Anchor RSS
           </div>
         </div>
 
         {/* Quiet Copyright Row */}
-        <div className="pt-6 border-t border-[#1c1813] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#75685a] font-futura text-xs tracking-wide">
+        <div className="pt-6 border-t border-[#1c1711] flex flex-col sm:flex-row items-center justify-between gap-4 text-[#7c6e5b] font-futura text-xs tracking-wide">
           <div>
             © {new Date().getFullYear()} {podcast.title} · Por José Lázaro Peña. Todos los derechos reservados.
           </div>
-          <div className="flex items-center gap-4 text-[11px] text-[#695d50]">
+          <div className="flex items-center gap-4 text-[11px] text-[#6e604e]">
             <span>Filosofía con mancuernas</span>
             <span aria-hidden="true">·</span>
-            <span>Tipografía Futura Wes Anderson</span>
+            <span>Proporción Áurea & Hierros</span>
           </div>
         </div>
 

@@ -13,6 +13,8 @@ export const DEFAULT_PODCAST_INFO: PodcastInfo = {
   telegramUrl: "https://t.me/pasoporcrotona",
   applePodcastsUrl: "https://podcasts.apple.com/us/podcast/de-paso-por-crotona/id6792611427",
   instagramUrl: "https://www.instagram.com/h_de_luz/",
+  contactPhone: "+56 9 3746 0497",
+  whatsappUrl: "https://wa.me/56937460497",
   rssFeedUrl: "https://anchor.fm/s/112b570e4/podcast/rss",
   genres: ["Fitness & Salud", "Filosofía", "Cultura Física", "Deporte"],
   totalEpisodes: 15,
