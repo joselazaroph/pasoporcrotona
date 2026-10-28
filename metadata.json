@@ -1,0 +1,8 @@
+{
+  "name": "Web de Podcast & Sincronización Spotify",
+  "description": "Sitio web oficial de De paso por Crotona por José Lázaro Peña. Filosofía con mancuernas, sincronizado con Spotify, YouTube, Telegram y Apple Podcasts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
