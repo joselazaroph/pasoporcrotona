@@ -38,7 +38,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full p-[1.5px] bg-gradient-to-br from-[#e8cb88] via-[#d4af63] to-[#6e5223] shrink-0">
                 <img
-                  src="/crotona-logo-dark.jpg"
+                  src="./crotona-logo-dark.jpg"
                   alt="Emblema De paso por Crotona"
                   className="w-full h-full rounded-full object-cover"
                 />

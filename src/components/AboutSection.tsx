@@ -36,7 +36,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ podcast }) => {
                 title="Haz clic para ver la semblanza de José Lázaro Peña"
               >
                 <img
-                  src="/jose-lazaro-pena.jpg"
+                  src="./jose-lazaro-pena.jpg"
                   alt="José Lázaro Peña - La Voz de Crotona"
                   className="w-full h-96 sm:h-[430px] object-cover object-top filter contrast-[1.04] group-hover:scale-[1.02] transition-transform duration-500"
                 />
@@ -82,7 +82,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ podcast }) => {
               {/* Bottom label under the photo frame with Official ICO Medallion */}
               <div className="mt-3 flex items-center justify-center gap-2.5 text-center">
                 <img
-                  src="/crotona-logo-dark.jpg"
+                  src="./crotona-logo-dark.jpg"
                   alt="Emblema Crotona"
                   className="w-5 h-5 rounded-full border border-[#d4af63]/60 object-cover"
                 />
@@ -102,7 +102,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ podcast }) => {
             {/* Inscription */}
             <div className="flex items-center gap-2.5 text-xs uppercase tracking-widest font-futura font-semibold text-[#d4af63]">
               <img
-                src="/crotona-logo-dark.jpg"
+                src="./crotona-logo-dark.jpg"
                 alt=""
                 className="w-5 h-5 rounded-full border border-[#d4af63]/50 object-cover"
               />
@@ -179,7 +179,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ podcast }) => {
             <div className="flex items-center justify-between p-6 border-b border-[#2d251b] bg-[#0d0b08]">
               <div className="flex items-center gap-3">
                 <img
-                  src="/crotona-logo-dark.jpg"
+                  src="./crotona-logo-dark.jpg"
                   alt="Emblema Crotona"
                   className="w-9 h-9 rounded-full border border-[#d4af63]/60 object-cover"
                 />
@@ -208,7 +208,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ podcast }) => {
               <div className="flex flex-col sm:flex-row gap-6 items-center sm:items-start">
                 <div className="w-36 h-36 sm:w-44 sm:h-44 shrink-0 rounded overflow-hidden border border-[#3d3224] shadow-lg">
                   <img
-                    src="/jose-lazaro-pena.jpg"
+                    src="./jose-lazaro-pena.jpg"
                     alt="José Lázaro Peña"
                     className="w-full h-full object-cover object-top"
                   />
