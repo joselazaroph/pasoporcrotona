@@ -8,11 +8,13 @@ export const DEFAULT_PODCAST_INFO: PodcastInfo = {
   hostBio: "José Lázaro Peña es periodista, fotógrafo y guía de turismo, nacido en Trinidad, Cuba, en 1998. Apasionado por el entrenamiento de fuerza, la filosofía, la literatura y la historia, combina el rigor de la investigación periodística con la experiencia de quien también entrena, cuestiona y se equivoca.",
   coverImage: "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45988481/45988481-1779327058844-e25e9b74d51a.jpg",
   heroImage: "/src/assets/images/podcast_studio_hero_1793194526423.jpg",
-  spotifyShowUrl: "https://open.spotify.com/show/033inbTrwcYemhXpFYhcd0",
+  spotifyShowUrl: "https://anchor.fm/s/112b570e4/podcast/rss",
   youtubeUrl: "https://www.youtube.com/@pasoporcrotona",
   telegramUrl: "https://t.me/pasoporcrotona",
   applePodcastsUrl: "https://podcasts.apple.com/us/podcast/de-paso-por-crotona/id6792611427",
   instagramUrl: "https://www.instagram.com/h_de_luz/",
+  contactPhone: "+56 9 3746 0497",
+  whatsappUrl: "https://wa.me/56937460497",
   rssFeedUrl: "https://anchor.fm/s/112b570e4/podcast/rss",
   genres: ["Fitness & Salud", "Filosofía", "Cultura Física", "Deporte"],
   totalEpisodes: 15,
@@ -222,7 +224,7 @@ export const PRESET_SHOWS = [
   {
     name: "De paso por Crotona (Tu Podcast)",
     feedUrl: "https://anchor.fm/s/112b570e4/podcast/rss",
-    spotifyUrl: "https://open.spotify.com/show/033inbTrwcYemhXpFYhcd0",
+    spotifyUrl: "https://anchor.fm/s/112b570e4/podcast/rss",
     description: "Filosofía con mancuernas por José Lázaro Peña."
   },
   {

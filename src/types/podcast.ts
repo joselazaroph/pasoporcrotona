@@ -31,6 +31,8 @@ export interface PodcastInfo {
   telegramUrl?: string;
   instagramUrl?: string;
   twitterUrl?: string;
+  contactPhone?: string;
+  whatsappUrl?: string;
   genres: string[];
   totalEpisodes: number;
   rating?: string;
