@@ -2,7 +2,7 @@ name: Desplegar Podcast en GitHub Pages
 
 on:
   push:
-    branches: ['main', 'master']
+    branches: ['main', 'master', 'feature/dark-mode-ui']
   workflow_dispatch:
 
 permissions:
