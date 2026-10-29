@@ -40,7 +40,7 @@ export const EpisodeCard: React.FC<EpisodeCardProps> = ({
             className="relative w-24 h-24 sm:w-28 sm:h-28 shrink-0 rounded overflow-hidden bg-[#12100c] border border-[#3a3023] group-hover:border-[#d4af63]/50 cursor-pointer group/thumb shadow-lg transition-colors"
           >
             <img
-              src={!imageError && episode.thumbnail ? episode.thumbnail : '/crotona-logo.jpg'}
+              src={!imageError && episode.thumbnail ? episode.thumbnail : './crotona-logo.jpg'}
               alt={episode.title}
               referrerPolicy="no-referrer"
               onError={() => setImageError(true)}

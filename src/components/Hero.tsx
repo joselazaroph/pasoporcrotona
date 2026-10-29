@@ -24,10 +24,10 @@ export const Hero: React.FC<HeroProps> = ({
 
   // Use the latest episode's authentic thumbnail; fallback to local official Milón de Crotona cover
   const heroThumbnail = showMainEmblem
-    ? '/crotona-logo.jpg'
+    ? './crotona-logo.jpg'
     : (!imageFailed && latestEpisode?.thumbnail)
       ? latestEpisode.thumbnail
-      : '/crotona-logo.jpg';
+      : './crotona-logo.jpg';
 
   return (
     <section className="relative overflow-hidden pt-10 pb-16 lg:pt-18 lg:pb-24 border-b border-[#2d251b] bg-[#090806]">
@@ -221,7 +221,7 @@ export const Hero: React.FC<HeroProps> = ({
                       className="absolute top-3 right-3 w-12 h-12 rounded-full p-0.5 bg-gradient-to-br from-[#e8cb88] to-[#8e6f36] shadow-xl hover:scale-110 transition-transform cursor-pointer"
                     >
                       <img
-                        src="/crotona-logo.jpg"
+                        src="./crotona-logo.jpg"
                         alt="Milón de Crotona"
                         className="w-full h-full rounded-full object-cover"
                       />

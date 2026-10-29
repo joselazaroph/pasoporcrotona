@@ -125,7 +125,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ podcast }) => {
                 
                 <div className="flex items-center gap-3.5 border-b border-[#261f16] pb-4">
                   <img
-                    src="/crotona-logo.jpg"
+                    src="./crotona-logo.jpg"
                     alt="Milón de Crotona"
                     className="w-14 h-14 rounded-full border-2 border-[#d4af63] object-cover shadow-md shrink-0"
                   />
@@ -143,18 +143,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ podcast }) => {
                 </div>
 
                 {/* Big Phone Number Plaque */}
-                <div className="p-4 rounded bg-[#16130e] border border-[#30271c] flex items-center justify-between gap-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded bg-[#211b13] border border-[#3d3122] flex items-center justify-center text-[#d4af63]">
+                <div className="p-3.5 sm:p-4 rounded bg-[#16130e] border border-[#30271c] flex items-center justify-between gap-2.5">
+                  <div className="flex items-center gap-2.5 min-w-0">
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 shrink-0 rounded bg-[#211b13] border border-[#3d3122] flex items-center justify-center text-[#d4af63]">
                       <Phone className="w-4 h-4" />
                     </div>
-                    <div>
-                      <div className="text-[10px] font-futura uppercase tracking-widest text-[#8c7b65]">
+                    <div className="min-w-0">
+                      <div className="text-[10px] font-futura uppercase tracking-widest text-[#8c7b65] whitespace-nowrap">
                         Teléfono / WhatsApp
                       </div>
                       <a
                         href={`tel:+${phoneClean}`}
-                        className="font-futura text-lg sm:text-xl font-bold tracking-wider text-[#f3ebd8] hover:text-[#d4af63] transition-colors tabular-nums"
+                        className="block font-futura text-base sm:text-lg font-bold tracking-wide text-[#f3ebd8] hover:text-[#d4af63] transition-colors tabular-nums whitespace-nowrap"
                       >
                         {phoneDisplay}
                       </a>
@@ -165,7 +165,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ podcast }) => {
                     type="button"
                     onClick={handleCopyPhone}
                     title="Copiar número de teléfono"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded text-xs font-futura uppercase tracking-wider bg-[#211b13] hover:bg-[#2c2419] text-[#d4af63] border border-[#3d3122] transition-colors cursor-pointer"
+                    className="shrink-0 inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded text-xs font-futura uppercase tracking-wider bg-[#211b13] hover:bg-[#2c2419] text-[#d4af63] border border-[#3d3122] transition-colors cursor-pointer whitespace-nowrap"
                   >
                     {copiedPhone ? (
                       <>

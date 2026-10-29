@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="relative w-10 h-10 rounded-full p-[1.5px] bg-gradient-to-br from-[#e8cb88] via-[#d4af63] to-[#6e5223] shadow-md shadow-[#d4af63]/15 group-hover:shadow-[#d4af63]/35 transition-all duration-300">
             <div className="w-full h-full rounded-full overflow-hidden bg-[#100e0b] flex items-center justify-center">
               <img
-                src="/crotona-logo-dark.jpg"
+                src="./crotona-logo-dark.jpg"
                 alt="Emblema De paso por Crotona"
                 className="w-full h-full object-cover scale-105 group-hover:scale-115 transition-transform duration-500"
               />
